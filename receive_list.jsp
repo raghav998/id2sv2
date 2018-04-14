@@ -50,7 +50,7 @@
 						<td><%=count%></td>
 						<td><%=rs.getString(1)%></td>
 						<td><%=rs.getString(2)%></td>
-						<a href="check_key.jsp?file=<%=rs.getString(2)%>"><td> Download</td></a> 
+						<td> <a href="check_key.jsp?file=<%=rs.getString(2)%>">Download</a> </td>
 					</tr>
 					<%
 

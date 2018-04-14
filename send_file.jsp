@@ -121,9 +121,9 @@
           <h3>Generator: </h3>
           <h4> <%=b%> </h4></p>
           <p> 
-          <h3>Secret Key: </h3>
+          <!-- <h3>Secret Key: </h3>
           <h4> <%=x%> </h4></p>
-          <p> 
+          <p>  -->
           <h3>Public Key: </h3>
           <h4> <%=pkey%> </h4></p>
           <div> </div>
