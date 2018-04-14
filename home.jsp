@@ -15,8 +15,11 @@
 	<div class="container">
 		<h1>Welcome <%=myname%></h1>
 		<br/>
-		<a href="search_users.jsp"><img src="https://cdn4.iconfinder.com/data/icons/flatified/512/plane.png" height="60%" width="30%"></a>
-		<img src="https://cdn0.iconfinder.com/data/icons/large-glossy-icons/512/Save_data.png" height="50%" width="25%">
+		<!-- <a href="search_users.jsp"><img src="https://cdn4.iconfinder.com/data/icons/flatified/512/plane.png" height="60%" width="30%"></a> -->
+		<form action="search_users.jsp">
+		<button type="submit" >Share</button><br/>
+		</form>
+		<!-- <img src="https://cdn0.iconfinder.com/data/icons/large-glossy-icons/512/Save_data.png" height="50%" width="25%"> -->
 		<form class="form" method="post" action="index.html">
 			<!-- <input type="text" placeholder="Username" name="name">
 			<input type="password" placeholder="Password" name="password">

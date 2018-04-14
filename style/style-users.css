@@ -40,11 +40,11 @@ body :-ms-input-placeholder {
   background: #50a3a2;
   background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 0;
   width: 100%;
-  height: 100%;
-  /*margin-top: -350px;*/
+  height: 200%;
+  /*margin-top: -300px;*/
   overflow: hidden;
 }
 .wrapper.form-success .container h1 {
