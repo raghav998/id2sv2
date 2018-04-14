@@ -46,13 +46,15 @@
 				while(rs.next()){
 
 					%>
-					<tr>
+					<tr class="row">
 						<td><%=count%></td>
 						<td><%=rs.getString(1)%></td>
 						<td><%=rs.getString(2)%></td>
-						<td> <a href="check_key.jsp?file=<%=rs.getString(2)%>">Download</a> </td>
+						<!-- <td> <form action="check_key.jsp?file=<%=rs.getString(2)%>" method="get"><button type="submit"  class="download">Download</button></form> </td> -->
+						<td> <form method="get"><a href="check_key.jsp?file=<%=rs.getString(2)%>"><button type="button" class="download">Download</button></a></form> </td>
 					</tr>
 					<%
+					count++;
 
 				}
 			%>

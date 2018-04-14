@@ -64,6 +64,20 @@ body :-ms-input-placeholder {
   transition-timing-function: ease-in-put;
   font-weight: 200;
 }
+.row{
+  height: 40px;
+}
+.download{
+   -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 90px;
+  text-align: center;
+  height: 30px;
+  padding-top: 3px;
+  padding-left: 10px;
+  font-size: 15px;
+}
 form {
   padding: 20px 0;
   position: relative;
