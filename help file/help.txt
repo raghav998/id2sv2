@@ -1,0 +1,62 @@
+here using two server
+
+ server1 and server2
+
+first u can register server1 and then 
+register server2
+
+here ur key can send to ur given mailid
+
+each user can get one prime number
+
+then go to login page
+
+
+here u can share file to other user
+
+
+this are the public keys of to user
+
+now share file to end user
+
+
+this is the key of file
+
+
+file is successfully sended
+
+here u can search file name
+
+click get cipher key for file
+
+this is the chipher key for your
+ searched file
+
+
+get from mail ur private key
+
+here u are not given correct password 
+means not getting file
+
+u can't able to download file
+
+
+
+
+u are the authorized person for this 
+file means only u can able to download
+
+here u can give file recovery key
+
+file has been downloaded successfully
+
+
+
+if u are not authorized person of this file 
+
+this is called dictionary attack.
+
+
+
+
+
