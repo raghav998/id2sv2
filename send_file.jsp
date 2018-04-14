@@ -14,6 +14,10 @@
 	String x=null,p=null,b=null,sname=null,sc=null,myx=null;				
 	Statement st = null;
 	ResultSet rs=null;
+	int id;
+
+	session.setAttribute("y",y);
+	session.setAttribute("name",name);
 
 	try{
 		Class.forName("com.mysql.jdbc.Driver");
@@ -31,9 +35,7 @@
 	{
 		out.println(eq.getMessage());
 	}
-	finally{
-		con.close();
-	}
+	
 %>
 <%		
 				
@@ -58,9 +60,6 @@
 	{
 		out.println(eq.getMessage());
 	}
-	finally{
-		con1.close();
-	}
 %>
 <%		
 				
@@ -81,9 +80,6 @@
 	catch (Exception eq) 
 	{
 		out.println(eq.getMessage());
-	}
-	finally{
-		con2.close();
 	}
 %>
 <%
@@ -107,10 +103,13 @@
 	<div class="container">
 		<h1>Send to <%=name%></h1>
 		<br/>
+		<form method="post" name="contact" action="uploadfile.jsp" enctype="multipart/form-data">
+			<input type="text" name="title" placeholder="File Name">
+			Random Message Key is <%=y%>
+			<input type="file" name="myfile">
+			<input type="submit" name="submit" value="Share">
+		</form>
 		<form class="form" method="post" action="index.html">
-			<!-- <input type="text" placeholder="Username" name="name">
-			<input type="password" placeholder="Password" name="password">
-			New user? <a href="register.html">Click here to Signup</a><br/> -->
 			<button type="submit" id="login-button">Logout</button>
 		</form>
 	</div>
@@ -141,7 +140,17 @@
 		<li></li>
 	</ul>
 </div>
-
+ <%
+// 	try{
+// 			con1.close();
+// 			con2.close();
+// 			con.close();
+// 		}
+// 		catch(Exception e){
+// 			e.printStackTrace();
+// 		}
+// 	}
+%>
 <script type="text/javascript" src="script/script.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 	<div class="container">
 		<h1>Select user to send file</h1>
 		<br/>
-		<form class="form" method="get" action="index.html">
+		<form class="form" method="post" action="index.html">
 
 			<%		
 				Statement st = null;
@@ -24,7 +24,7 @@
 					String sql="select * from profile";
 					rs=st.executeQuery(sql);
 					while(rs.next()){%>
-                        <a href="send_file.jsp?user=<%=rs.getString("name")%>"><button><%=rs.getString("name")%></button></a><br/><br/> 
+                        <a href="send_file.jsp?user=<%=rs.getString("name")%>"><button type="button"><%=rs.getString("name")%></button></a><br/><br/> 
             <%}	
 			}
 			catch (Exception eq4) {
