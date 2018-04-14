@@ -93,7 +93,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style/style.css" />
+<link rel="stylesheet" type="text/css" href="style/style-users.css " />
 
 <meta charset="UTF-8">
 <title>Login</title>
@@ -105,15 +105,30 @@
 		<br/>
 		<form method="post" name="contact" action="uploadfile.jsp" enctype="multipart/form-data">
 			<input type="text" name="title" placeholder="File Name">
-			Random Message Key is <%=y%>
+			<h2>Random Message Key is <%=y%></h2>
 			<input type="file" name="myfile">
 			<input type="submit" name="submit" value="Share">
 		</form>
 		<form class="form" method="post" action="index.html">
 			<button type="submit" id="login-button">Logout</button>
 		</form>
+	   <div>     
+          <h2><b>Public Keys of <%=sname%> </b></h2>
+          <p> 
+          <h3>Prime Number: </h3>
+          <h4> <%=p%> </h4></p>
+          <p> 
+          <h3>Generator: </h3>
+          <h4> <%=b%> </h4></p>
+          <p> 
+          <h3>Secret Key: </h3>
+          <h4> <%=x%> </h4></p>
+          <p> 
+          <h3>Public Key: </h3>
+          <h4> <%=pkey%> </h4></p>
+          <div> </div>
+      </div>
 	</div>
-	
 	<ul class="bg-bubbles">
 		<li></li>
 		<li></li>
