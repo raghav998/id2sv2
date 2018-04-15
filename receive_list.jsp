@@ -1,11 +1,17 @@
 <%@page import="java.sql.*,java.util.*,java.io.*,javax.servlet.*,javax.servlet.http.*"%>
+<%
+	String check_name=(String)session.getAttribute("myname");
+	if(check_name.equals(null)){
+		response.sendRedirect("index.html");
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style/style.css" />
 
 <meta charset="UTF-8">
-<title>Login</title>
+<title>Received Files</title>
 </head>
 <body>
 	<div class="wrapper">
@@ -67,10 +73,8 @@ else {%>
 	<%}%>
 
 
-		<form class="form" method="post" action="home.jsp">
-			<button type="submit" id="login-button">Go Back</button>
-		</form>
 		<form class="form" method="post" action="index.html">
+			<a href="home.jsp"><button type="button" id="login-button">Go Home</button></a>
 			<button type="submit" id="login-button">Logout</button>
 		</form>
 	</div>

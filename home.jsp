@@ -1,4 +1,10 @@
 <%
+	String check_name=(String)session.getAttribute("myname");
+	if(check_name.equals(null)){
+		response.sendRedirect("index.html");
+	}
+%>
+<%
 		String myname=(String)session.getAttribute("myname");
 		String myemail=(String)session.getAttribute("myemail");
 %>
@@ -8,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="style/style.css" />
 
 <meta charset="UTF-8">
-<title>Login</title>
+<title>Welcome</title>
 </head>
 <body>
 	<div class="wrapper">
@@ -24,9 +30,6 @@
 		</form>
 		<!-- <img src="https://cdn0.iconfinder.com/data/icons/large-glossy-icons/512/Save_data.png" height="50%" width="25%"> -->
 		<form class="form" method="post" action="index.html">
-			<!-- <input type="text" placeholder="Username" name="name">
-			<input type="password" placeholder="Password" name="password">
-			New user? <a href="register.html">Click here to Signup</a><br/> -->
 			<button type="submit" id="login-button">Logout</button>
 		</form>
 	</div>

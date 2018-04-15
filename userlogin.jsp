@@ -2,7 +2,7 @@
 <%@ page import="databaseconnection.*"%>
 <html>
 <head>
-<title>Authenticated Key Exchange</title>
+<title>Logging in</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 

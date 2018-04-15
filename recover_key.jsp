@@ -4,6 +4,12 @@
 <%@page import="javax.crypto.*"%>
 <%@page import="ElGamal.*"%>
 <%
+	String check_name=(String)session.getAttribute("myname");
+	if(check_name.equals(null)){
+		response.sendRedirect("index.html");
+	}
+%>
+<%
 	Elgamal_Decryption elgam=new Elgamal_Decryption();
 
 	String myname=(String)session.getAttribute("myname");
@@ -72,7 +78,7 @@
 <link rel="stylesheet" type="text/css" href="style/style.css" />
 
 <meta charset="UTF-8">
-<title>Login</title>
+<title>File Key</title>
 </head>
 <body>
 	<div class="wrapper">
@@ -83,7 +89,7 @@
 			<button type="submit" id="login-button">Decrypt & Download</button>
 		</form>
 		<form class="form" method="post" action="home.jsp">
-			<button type="submit" id="login-button">Go back</button>
+			<button type="submit" id="login-button">Go Home</button>
 		</form>
 		<form class="form" method="post" action="index.html">
 			<button type="submit" id="login-button">Logout</button>

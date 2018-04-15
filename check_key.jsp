@@ -1,5 +1,11 @@
 <%@ page import="java.sql.*" errorPage="error.html" %>
 <%
+	String check_name=(String)session.getAttribute("myname");
+	if(check_name.equals(null)){
+		response.sendRedirect("index.html");
+	}
+%>
+<%
 		String myname=(String)session.getAttribute("myname");
 		String myemail=(String)session.getAttribute("myemail");
 		String myfile=request.getParameter("file");
@@ -37,7 +43,7 @@
 <link rel="stylesheet" type="text/css" href="style/style.css" />
 
 <meta charset="UTF-8">
-<title>Login</title>
+<title>Verify Key</title>
 </head>
 <body>
 	<div class="wrapper">
@@ -49,10 +55,8 @@
 			<input type="text"  name="privatekey" placeholder="Private Key">
 			<button type="submit" id="login-button">Verify</button>
 		</form>
-		<form class="form" method="post" action="home.jsp">
-			<button type="submit" id="login-button">Go back</button>
-		</form>
 		<form class="form" method="post" action="index.html">
+			<a href="home.jsp"><button type="button" id="login-button">Go Home</button></a>
 			<button type="submit" id="login-button">Logout</button>
 		</form>
 	</div>

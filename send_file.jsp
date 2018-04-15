@@ -4,6 +4,12 @@
 <%@page import="javax.crypto.*"%>
 <%@page import="ElGamal.*"%>
 <%
+	String check_name=(String)session.getAttribute("myname");
+	if(check_name.equals(null)){
+		response.sendRedirect("index.html");
+	}
+%>
+<%
 	KeyGeneration keygen=new KeyGeneration();
 		
 	int y= (int)(Math.random()*500);
@@ -96,7 +102,7 @@
 <link rel="stylesheet" type="text/css" href="style/style-users.css " />
 
 <meta charset="UTF-8">
-<title>Login</title>
+<title>Send File</title>
 </head>
 <body>
 	<div class="wrapper">
@@ -107,27 +113,28 @@
 			<input type="text" name="title" placeholder="File Name">
 			<h2>Random Message Key is <%=y%></h2>
 			<input type="file" name="myfile">
-			<input type="submit" name="submit" value="Share">
-		</form>
-		<form class="form" method="post" action="index.html">
-			<button type="submit" id="login-button">Logout</button>
+			<button type="submit" class="login-button">Share</button>
 		</form>
 	   <div>     
           <h2><b>Public Keys of <%=sname%> </b></h2>
           <p> 
-          <h3>Prime Number: </h3>
+          <h3>Prime Number </h3>
           <h4> <%=p%> </h4></p>
           <p> 
-          <h3>Generator: </h3>
+          <h3>Generator </h3>
           <h4> <%=b%> </h4></p>
           <p> 
           <!-- <h3>Secret Key: </h3>
           <h4> <%=x%> </h4></p>
           <p>  -->
-          <h3>Public Key: </h3>
+          <h3>Public Key </h3>
           <h4> <%=pkey%> </h4></p>
           <div> </div>
       </div>
+      <form class="form" method="post" action="index.html">
+			<a href="home.jsp"><button type="button" id="login-button">Go Home</button></a>
+			<button type="submit" id="login-button">Logout</button>
+		</form>
 	</div>
 	<ul class="bg-bubbles">
 		<li></li>

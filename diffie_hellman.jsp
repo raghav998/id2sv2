@@ -3,6 +3,12 @@
 <%@page import=" java.security.*"%>
 <%@page import="javax.crypto.*"%>
 <%@page import="ElGamal.*"%>
+<%
+	String check_name=(String)session.getAttribute("myname");
+	if(check_name.equals(null)){
+		response.sendRedirect("index.html");
+	}
+%>
 <%	
 	Diffie_Hellman dh=new Diffie_Hellman();
 		
@@ -65,7 +71,7 @@
 <link rel="stylesheet" type="text/css" href="style/style.css" />
 
 <meta charset="UTF-8">
-<title>Login</title>
+<title>Diffie Hellman</title>
 </head>
 <body>
 	<div class="wrapper">
@@ -93,7 +99,7 @@
 			<h1 style="color: red;">Private Key Wrong</h1>
 		<%}%>
 		<form class="form" method="post" action="home.jsp">
-			<button type="submit" id="login-button">Go back</button>
+			<button type="submit" id="login-button">Go Home</button>
 		</form>
 		<form class="form" method="post" action="index.html">
 			<button type="submit" id="login-button">Logout</button>

@@ -3,6 +3,12 @@
 <%@page import=" java.security.*"%>
 <%@page import="javax.crypto.*"%>
 <%@page import="ElGamal.*"%>
+<%
+	String check_name=(String)session.getAttribute("myname");
+	if(check_name.equals(null)){
+		response.sendRedirect("index.html");
+	}
+%>
 <html>
 <head>
 </head>
