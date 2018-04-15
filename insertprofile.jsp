@@ -53,6 +53,7 @@
 
 			System.out.println("max id is "+id);
 
+
 		String name=null,gender=null,email=null,password=null,status="Allow",image=null,mobile=null,location=null;
 
 		name=request.getParameter("name");
@@ -60,6 +61,13 @@
 		password=request.getParameter("password");
 
 		location=request.getParameter("location");
+
+		sql1="select count(id) from profile where name=\""+name+"\"";
+		rs=st.executeQuery(sql1);
+		rs.next();
+		if(rs.getInt(1)!=0){
+			response.sendRedirect("register.jsp");
+		}
 
 		java.util.Date now = new java.util.Date();
 	String date=now.toString();
