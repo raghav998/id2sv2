@@ -11,12 +11,12 @@
 			<h1>Welcome</h1>
 		
 		<form class="form" method="post" name="contact" action="insertprofile.jsp">
-			<input type="text" placeholder="Username" name="name">
+			<input type="text" placeholder="Username" name="name" required>
 			<h3 style="color: red;">Username already taken.Please pick another</h3>
-			<input type="email" placeholder="Email" name="email">
-			<input type="password" placeholder="Password" name="password">
-			<input type="text" placeholder="Location" name="location">
-			<input type="number" placeholder="PrivateKey (Number)" name="pkey" min="100">
+			<input type="email" placeholder="Email" name="email" required>
+			<input type="password" placeholder="Password" name="password" required>
+			<input type="text" placeholder="Location" name="location" required>
+			<input type="number" placeholder="PrivateKey (Number)" name="pkey" min="100" required>
 			Already have account?  <a href="index.html">Click here to Login</a><br/>
 			<button type="submit" id="login-button">Signup</button>
 		</form>

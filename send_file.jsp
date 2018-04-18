@@ -110,9 +110,9 @@
 		<h1>Send to <%=name%></h1>
 		<br/>
 		<form method="post" name="contact" action="uploadfile.jsp" enctype="multipart/form-data">
-			<input type="text" name="title" placeholder="File Name">
+			<input type="text" name="title" placeholder="File Name" required>
 			<h2>Random Message Key is <%=y%></h2>
-			<input type="file" name="myfile">
+			<input type="file" name="myfile" required>
 			<button type="submit" class="login-button">Share</button>
 		</form>
 	   <div>     

@@ -52,7 +52,7 @@
 		<h2>File name : <%=myfile%></h2><br/>
 		<h2>Cipher Key of File: <%=c1%></h2>
 		<form class="form" method="post" action="diffie_hellman.jsp">
-			<input type="text"  name="privatekey" placeholder="Private Key">
+			<input type="text"  name="privatekey" placeholder="Private Key" required>
 			<button type="submit" id="login-button">Verify</button>
 		</form>
 		<form class="form" method="post" action="index.html">
